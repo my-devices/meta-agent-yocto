@@ -38,7 +38,7 @@ $ bitbake macchina-remote-agent
 
 to build the `macchina-remote-agent` package.
 
-To install the package, Add
+To install the package, add:
 
 ```
 CORE_IMAGE_EXTRA_INSTALL += "macchina-remote-agent"
