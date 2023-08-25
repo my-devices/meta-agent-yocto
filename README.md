@@ -24,9 +24,15 @@ mobile apps.
 
 This repository contains a Yocto layer for building the macchina.io REMOTE Device Agent
 as a Yocto package.
+The package contains the `WebTunnelAgent` executable, a default configuration file
+(`/etc/WebTunnelAgent.properties`) and an `init.d` script and `systemd` service file.
+
+NOTE: The `webtunnel.domain` in the default configuration file is set to an all zero UUID,
+so the agent won't be able to connect to the server. The domain must be set to
+to a valid value for the agent to successfully connect.
 
 
-## Building
+## Building and Installing
 
 Add `/path/to/meta-agent-yocto` to `BBLAYERS` in your `build/conf/bblayers.conf` file.
 
@@ -38,7 +44,7 @@ $ bitbake macchina-remote-agent
 
 to build the `macchina-remote-agent` package.
 
-To install the package, add:
+To install the package in the image, add:
 
 ```
 CORE_IMAGE_EXTRA_INSTALL += "macchina-remote-agent"
@@ -46,3 +52,5 @@ CORE_IMAGE_EXTRA_INSTALL += "macchina-remote-agent"
 
 to your `build/conf/local.conf` file.
 
+Alternatively, the built package can also be manually installed on the target
+using the package manager (e.g., `opkg`).
