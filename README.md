@@ -1,4 +1,4 @@
-# macchina.io REMOTE Device Agent Yocto Package
+# macchina.io REMOTE Device Agent Yocto Layer
 
 Yocto layer meta data for macchina.io REMOTE Device Agent
 ([WebTunnelAgent](https://github.com/my-devices/sdk/blob/master/WebTunnel/WebTunnelAgent)).
