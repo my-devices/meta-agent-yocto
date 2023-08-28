@@ -1,7 +1,7 @@
 # macchina.io REMOTE Device Agent Yocto Layer
 
-Yocto layer meta data for macchina.io REMOTE Device Agent
-([WebTunnelAgent](https://github.com/my-devices/sdk/blob/master/WebTunnel/WebTunnelAgent)).
+Yocto layer meta data, including [recipe](https://wiki.yoctoproject.org/wiki/Building_your_own_recipes_from_first_principles) 
+for macchina.io REMOTE Device Agent ([WebTunnelAgent](https://github.com/my-devices/sdk/blob/master/WebTunnel/WebTunnelAgent)).
 
 The layer has been tested with Yocto Kirkstone and `core-image-sato` running in QEMU.
 
