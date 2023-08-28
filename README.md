@@ -3,6 +3,7 @@
 Yocto layer meta data for macchina.io REMOTE Device Agent
 ([WebTunnelAgent](https://github.com/my-devices/sdk/blob/master/WebTunnel/WebTunnelAgent)).
 
+The layer has been tested with Yocto Kirkstone and `core-image-sato` running in QEMU.
 
 ## About macchina.io REMOTE
 
@@ -50,7 +51,8 @@ To install the package in the image, add:
 CORE_IMAGE_EXTRA_INSTALL += "macchina-remote-agent"
 ```
 
-to your `build/conf/local.conf` file.
+to your `build/conf/local.conf` file and rebuild the image.
 
 Alternatively, the built package can also be manually installed on the target
-using the package manager (e.g., `opkg`).
+using the package manager (e.g., `rpm` or `opkg`).
+
