@@ -25,7 +25,7 @@ INITSCRIPT_PARAMS = "defaults 80"
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE_${PN} = "WebTunnelAgent.service"
 
-do_install:append() {
+do_install_append() {
 	install -d ${D}${sysconfdir}/init.d ${D}${systemd_system_unitdir} ${D}${sysconfdir}
 	install -m 0755 ${WORKDIR}/WebTunnelAgent ${D}${sysconfdir}/init.d
 	install -m 0644 ${WORKDIR}/WebTunnelAgent.service ${D}${systemd_system_unitdir}
