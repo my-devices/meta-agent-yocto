@@ -8,7 +8,6 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=4267f48fc738f50380cbeeb76f95cebc"
 
 SRCREV = "${AUTOREV}"
 SRC_URI = "git://github.com/my-devices/sdk.git;protocol=https;branch=main \
-	file://cmake-version.patch \
 	file://WebTunnelAgent \
 	file://WebTunnelAgent.service \
 	file://WebTunnelAgent.properties"
@@ -30,7 +29,7 @@ do_install:append() {
 	install -d ${D}${sysconfdir}/init.d ${D}${systemd_system_unitdir} ${D}${sysconfdir}
 	install -m 0755 ${WORKDIR}/WebTunnelAgent ${D}${sysconfdir}/init.d
 	install -m 0644 ${WORKDIR}/WebTunnelAgent.service ${D}${systemd_system_unitdir}
-	sed -i -e 's,@BINDIR@,${bindir},g' \
+	sed -i -e 's,@SBINDIR@,${sbindir},g' \
 		-e 's,@SYSCONFDIR@,${sysconfdir},g' \
 		-e 's,@LOCALSTATEDIR@,${localstatedir},g' \
 		${D}${systemd_system_unitdir}/WebTunnelAgent.service

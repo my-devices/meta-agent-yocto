@@ -12,7 +12,7 @@
 #
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-DAEMON=/usr/bin/WebTunnelAgent
+DAEMON=/usr/sbin/WebTunnelAgent
 NAME=WebTunnelAgent
 DESC="macchina.io REMOTE Device Agent"
 CONFFILE=/etc/WebTunnelAgent.properties
