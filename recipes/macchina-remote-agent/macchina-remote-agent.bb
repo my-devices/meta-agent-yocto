@@ -2,7 +2,7 @@ DESCRIPTION = "macchina.io REMOTE Device Agent"
 
 SECTION = "network"
 DEPENDS = "openssl"
-RDEPENDS_${PN} += "ca-certificates"
+RDEPENDS:${PN} += "ca-certificates"
 LICENSE = "BSL-1.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=4267f48fc738f50380cbeeb76f95cebc"
 
@@ -23,7 +23,7 @@ INITSCRIPT_NAME = "WebTunnelAgent"
 INITSCRIPT_PARAMS = "defaults 80"
 
 SYSTEMD_PACKAGES = "${PN}"
-SYSTEMD_SERVICE_${PN} = "WebTunnelAgent.service"
+SYSTEMD_SERVICE:${PN} = "WebTunnelAgent.service"
 
 do_install:append() {
 	install -d ${D}${sysconfdir}/init.d ${D}${systemd_system_unitdir} ${D}${sysconfdir}
@@ -36,4 +36,4 @@ do_install:append() {
 	install -m 0644 ${WORKDIR}/WebTunnelAgent.properties ${D}${sysconfdir}
 }
 
-CONFFILES_${PN} = "${sysconfdir}/WebTunnelAgent.properties"
+CONFFILES:${PN} = "${sysconfdir}/WebTunnelAgent.properties"
